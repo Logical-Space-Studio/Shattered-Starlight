@@ -6,7 +6,7 @@
 
 ## 制作组
 
-制作组（名称暂定）：[Shattered Starlight Studio](https://github.com/Shattered-Starlight-Studio)
+制作组：[Logical Space Studio](https://github.com/Logical-Space-Studio)
 
 人员分组（14）：
 
