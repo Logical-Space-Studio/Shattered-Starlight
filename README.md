@@ -16,7 +16,7 @@
 
 偶像幻灭视觉小说企划
 
-英文名（暂定）：Shattered Starlight
+英文名：Shattered Starlight
 
 ## 制作组
 
