@@ -287,8 +287,9 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-
             textbutton _("开始游戏") action Start()
+
+            textbutton _("音乐厅") action ShowMenu("music_hall")
 
         else:
 
@@ -534,7 +535,6 @@ style return_button:
 screen about():
 
     tag menu
-
     ## 此 use 语句将 game_menu 屏幕包含到了这个屏幕内。子级 vbox 将包含在
     ## game_menu 屏幕的 viewport 内。
     use game_menu(_("关于"), scroll="viewport"):

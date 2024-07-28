@@ -1,5 +1,7 @@
 ﻿image studio_logo = "assets/gui/studio_logo.png"
 
+# CHARACTERS INITIALIZATION
+
 image bg1 = "assets/backgrounds/bgp_01.png"
 
 image shiina = "assets/characters/shiina.png"
@@ -19,6 +21,12 @@ image side yutsuki = "assets/characters/yutsuki_side.png"
 
 
 define Shiina = Character(name = "佐佐木 诗菜", image = "shiina")
+define Shiina = Character(name = "榊 义悟", image = "gigo")
+define Shiina = Character(name = "榊 雾织", image = "kirioiri")
+define Shiina = Character(name = "藤原 圣香", image = "seika")
+define Shiina = Character(name = "浅井 优月", image = "yutsuki")
+
+
 label start :
     # call common_route
     return
