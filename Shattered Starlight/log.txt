@@ -1,52 +1,53 @@
-2024-07-24 13:31:21 UTC
-Windows-10-10.0.19045
+2024-07-31 14:28:32 UTC
+Windows-10-10.0.22621
 Ren'Py 8.2.3.24061702
 
-Early init took 0.06s
+Early init took 0.04s
 Loading error handling took 0.03s
-Loading script took 0.09s
-Loading save slot metadata took 0.05s
+Loading script took 0.70s
+Loading save slot metadata took 0.01s
 Loading persistent took 0.00s
 Running init code took 0.05s
-Loading analysis data took 0.01s
+Loading analysis data took 0.00s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Dump and make backups took 0.05s
+Backing up script files to 'C:\\Users\\inaku\\AppData\\Roaming/RenPy/backups\\Shattered Starlight':
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
+Initial gc took 0.02s
+DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.01s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.09s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 3072, 1920)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1080 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 536.23'
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Arc(TM) Graphics'
+Version: b'4.6.0 - Build 31.0.101.5008'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1920, 1080) physical=(1870, 1052) drawable=(1870, 1052)
 Could not open 'cache/shaders.txt':
 Maximum texture size: 4096x4096
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.01s
-Load screen analysis took 0.02s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
