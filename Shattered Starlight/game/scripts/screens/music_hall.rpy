@@ -17,76 +17,121 @@ init python:
         # 添加更多乐曲信息
     }
 
-
-screen music_hall_navigation :
-
-    tag menu
-    
-    use game_menu(_("音乐厅")) :
-        #vbox :
-
-        vbox :
-            
-            hbox :
-                viewport : 
-                    xinitial 0.0
-                    yinitial 0.0
-                    scrollbars "vertical"
-                    mousewheel True
-                    draggable True
-                    pagekeys True
-                    side_yfill True
-                    xsize 480
-
-                    spacing 10 # 元素间留白
-                    vbox :
-                        label _("音乐列表")
-
-                        style_prefix "radio"
-                        for sk, info in music_info.items() :
-                            
-                            textbutton info["name"]+" - "+info["author"] action [
-                                SetVariable("current_song", sk),
-                                SetVariable("info", music_info[sk]),
-                                Play("music", "assets/music/" + sk + ".wav"),
-                                Return(),
-                                ShowMenu(
-                                    "music_hall",
-                                    title = info["name"],
-                                    author = info["author"],
-                                    description = info["description"],
-                                    song_image = info["image"]
-                                )
-                            ]
-                        
-                vbox :
-                    xsize 1280
-                    
-                    transclude
-
 screen music_hall(title = "请选择音乐", author = "......", description = "......", song_image = "") :
     
     tag menu
     
     use music_hall_navigation :
             
-        viewport :
-            xsize 960
-            xinitial 0.0
-            yinitial 0.0
-            scrollbars "vertical"
-            mousewheel True
-            draggable True
-            pagekeys True
-            side_yfill True
-            
-            spacing 20
+        vbox :
+            pos (30,30)
 
             vbox :
+                spacing 20
                 label _(title)
                 # add song_image
-                spacing 10
-                label _("作曲")
                 text author
-                label _("介绍")
                 text description
+
+screen music_hall_navigation :
+    # 背景
+    add "#FFFFFF"
+
+    tag menu
+
+    # 顶部导航条
+    frame:
+        pos (0, 0)
+        xysize (1920, 127)
+        background "#E8E8E8"
+
+    textbutton "返回" :
+        
+        pos (0, 0)
+        background "#FFEFDB"
+        xysize(135, 104)
+        action Return()
+
+    hbox :
+        xpos 1063
+        ypos 0
+        spacing 10
+
+        button :
+            xysize (200, 107)
+            background "#FFEFDB"
+        button :
+            xysize (200, 107)
+            background "#FFEFDB"
+        button :
+            xysize (200, 107)
+            background "#FFEFDB"
+        button :
+            xysize (200, 107)
+            background "#FFEFDB"
+
+    # 按钮
+    grid 2 1 :
+        xpos 1145
+        ypos 165
+        spacing 40
+        style_prefix "radio"
+        for sk, info in music_info.items() :
+            
+            textbutton info["name"]+" - "+info["author"] :
+                xysize (317, 102)
+                background "#CCCCCC"
+                action [
+                    SetVariable("current_song", sk),
+                    SetVariable("info", music_info[sk]),
+                    Play("music", "assets/music/" + sk + ".wav"),
+                    Return(),
+                    ShowMenu(
+                        "music_hall",
+                        title = info["name"],
+                        author = info["author"],
+                        description = info["description"],
+                        song_image = info["image"]
+                    )
+                ]
+    
+    hbox :
+        pos(1145, 837)
+        spacing 20
+        button:
+            xysize (82,61)
+            background "#D6A05E"
+        button:
+            xysize (82,61)
+            background "#fcd19d"
+        button:
+            xysize (270,61)
+            background "#D6A05E"
+        button:
+            xysize (82,61)
+            background "#fcd19d"
+        button:
+            xysize (82,61)
+            background "#D6A05E"
+        
+    # 滑动条
+    bar :
+        xpos 1145
+        ypos 953
+        xysize (684, 33)
+        value Preference("music volume")
+
+    # 展示区域
+    frame:
+        xpos 25
+        ypos 748
+        xysize (994, 302)
+        background "#FFEFDB"
+
+        transclude
+    
+    frame :
+        xpos 75
+        ypos 840
+        xysize(898, 5)
+        background "#D6A05E"
